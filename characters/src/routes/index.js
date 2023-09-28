@@ -4,8 +4,8 @@ const controllers = require("../cotrollers");
 
 const router = Router();
 
-router.get("/", controllers.getCharacters);
-router.post("/", controllers.createCharacter);
+router.get("/characters", controllers.getCharacters);
+router.post("/characters", controllers.createCharacter);
 
 
 module.exports = router;
