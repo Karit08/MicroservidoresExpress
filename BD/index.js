@@ -1,5 +1,5 @@
-const server = require("./src");
-const mongo = require("./src/config/connect");
+const server = require("./src/server");
+// const mongo = require("./src/config/connect");
 
 const {Character, Film } = require("./src/database");
 
@@ -8,5 +8,5 @@ const {Character, Film } = require("./src/database");
 
 server.listen(3004, ()=>{
     console.log("DB service listening on port 3004");
-    mongo();
+    // mongo();
 });
