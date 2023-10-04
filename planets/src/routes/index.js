@@ -3,8 +3,8 @@ const controllers = require("../controllers");
 
 const router = Router();
 
-router.get("/", controllers.getPlanets);
-router.post("/", controllers.createPlanets);
+router.get("/planets", controllers.getPlanets);
+router.post("/planets", controllers.createPlanets);
 
 
 module.exports = router;

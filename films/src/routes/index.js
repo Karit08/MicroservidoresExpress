@@ -4,8 +4,8 @@ const controllers = require("../controllers");
 
 const router = Router();
 
-router.get("/", controllers.getFilms);
-router.post("/", controllers.createFilms);
+router.get("/films", controllers.getFilms);
+router.post("/films", controllers.createFilms);
 
 
 module.exports = router;
