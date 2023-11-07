@@ -1,9 +1,10 @@
 const { Router } = require("express");
-const store = require("../index");
-const { validateModel } = require("../middlewares");
+const store = require("../database");
+const { validateModel } = require("../database/middlewares");
 
 const router = Router();
 
+//modelo creados a traves de los metodos estaticos definidos en los schemas 
 router.get("/:model", validateModel , async (req, res) => {
     const {model} = req.params;
     const response = await store[model].list();
@@ -30,27 +31,6 @@ router.post("/:model", validateModel , async (req, res) => {
 
 
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Prueba de rutas dinamicas-------------------------------------------------------
 // const router = require("express").Router();
 // const fileSystem = require("fs");
