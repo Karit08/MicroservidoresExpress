@@ -1,7 +1,8 @@
 const Character = require("../data");
 
 module.exports = async (req, res)=>{
-    const character = await Character.list();
-    // res.status(200).send("personajes");
+    const {id} = req.params;
+    // console.log(id);
+    const character = await Character.get(id);
     res.status(200).json(character);
 }
